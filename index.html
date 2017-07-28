@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<title>Startrix</title>
+		<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/> <!-- favicon -->
+		<!--<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet">--><!-- fontul Raleway de la Google fonts -->
+		<link rel="stylesheet" type="text/css" href="css/font.css"> <!-- font-face pentru Raleway -->
+
+		<link rel="stylesheet" type="text/css" href="css/icomoon.css"> <!-- icomoon -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css"> <!-- resetarea stilurilor implicite de la browser --> 
+		<link rel="stylesheet" type="text/css" href="css/animate.css"> <!-- animate.css - aici se afla toate animatiile -->
+		<link rel="stylesheet" type="text/css" href="css/responsive.css"> <!-- teoria grilei -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"> <!-- fisierul principal css -->
+	</head>
+
+	<body>
+
+		<!-- loading screen -->
+		<div class="loading"></div>
+
+
+
+
+
+		<!-- bara de navigare -->
+		<nav>
+			<div class="inner">
+
+				<div class="logo"><a href="#"><img src="img/logo.png"/></a></div>
+
+				<!-- butonul toggle de la bara de navigare cand latimea site-ului este mai mica sau egala decat 768px -->
+				<button type="button" class="toggle-button">
+					<div class="menu"></div>
+				</button>
+
+				<ul>
+					<li><a class="page-scroll" href="#banner">Acasă</a></li>
+					<li><a class="page-scroll" href="#about-universe">Despre Univers</a></li>
+					<li><a class="page-scroll" href="#curiosities">Curiozităţi</a></li>
+					<li><a class="page-scroll" href="#solar-system">Sistemul Solar</a></li>
+				</ul>
+
+			</div>	
+		</nav>
+
+
+
+
+
+		<!--===================
+		SECTIUNEA BANNER
+		====================-->
+		<section id="banner">
+			<div class="inner">
+				<h1>Explorează Universul cu Startrix</h1>
+				<p>Site-ul conţine informaţii interesante despre Univers, un loc necunoscut şi plin de mistere, şi încercarea omenirii de a descoperii cât mai multe despre acesta.</p>
+				<div class="button"><a href="#about-universe" class="banner-button">SĂ ÎNCEPEM</a></div>
+				
+			</div>
+				<!-- mouse scroll -->
+				<div class="mouse-scroll animated-infinite">	
+				</div>
+		</section>
+
+
+
+
+
+		<!--===================
+		SECTIUNEA DESPRE UNIVERS
+		====================-->
+		<section id="about-universe">
+
+			<!-- Ce este Universul -->
+			<div id="universe">
+				<div class="inner">
+					<div class="title">
+						<h2>Ce este Universul?</h2>
+						<p>Acesta reprezintă tot ceea ce există , lumea în totalitatea ei, nemărginită în timp şi spatiu.</p>
+					</div>
+			
+					<div class="boxes row">
+
+						<!-- Galaxii -->
+						<div class="col-4">
+							<div class="box box1 visibility-hidden animated" data-animation-name="fadeInUp" data-animation-duration="1500ms">
+								<i class="icon-galaxy"></i>
+								<h4>Galaxii</h4>
+								<p>O galaxie este un sistem de masă, unit de forţe gravitaţionale, alcătuit dintr-o aglomeraţie de stele, praf şi gaz interstelar.</p>
+								<a class="more-info" data-modal="modal-box1">MAI MULT</a>
+							</div>
+						</div>
+
+						<!-- Stele -->
+						<div class="col-4">
+							<div class="box box2 visibility-hidden animated" data-animation-name="fadeInUp" data-animation-duration="1500ms" data-animation-delay="400ms">
+								<i class="icon-sun"></i>
+								<h4>Stele</h4>
+								<p>O stea reprezintă un corp ceresc luminos din gaz, preponderent hidrogen şi heliu, menţinut împreună de gravitaţie.</p>
+								<a class="more-info" data-modal="modal-box2">MAI MULT</a>
+							</div>
+						</div>
+
+						<!-- Sisteme planetare -->
+						<div class="col-4">
+							<div class="box box3 visibility-hidden animated" data-animation-name="fadeInUp" data-animation-duration="1500ms" data-animation-delay="800ms">
+								<i class="icon-solar-system"></i>
+								<h4>Sisteme planetare</h4>
+								<p>Un sistem planetar este alcătuit în general dintr-o stea sau un sistem de stele împreună cu toate obiectele cerești ce gravitează în jurul ei.</p>
+								<a class="more-info" data-modal="modal-box3">MAI MULT</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div id="theories">
+
+				<!-- Teoria Big Bang -->
+				<div id="big-bang">
+					<div class="inner row">
+						<div class="left-img col-5"></div>
+						<div class="right-text col-5">
+							<h3>Teoria Big Bang</h3>
+							<p>Această teorie susţine că Universul nostru îşi are începuturile într-un singur punct originar, de o densitate incredibil de mare, extraordinar de fierbinte, numit şi singularitate. </p>
+							<button class="more-info visibility-hidden animated" data-modal="modal-box4" data-animation-name="fadeInUp" data-animation-duration="1500ms">MAI MULT</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Gaurile Negre -->
+				<div id="black-hole">
+					<div class="inner row">
+						<div class="left-text col-5">
+							<h3>Găurile Negre</h3>
+							<p>O gaură neagră reprezintă un câmp gravitaţional atât de puternic încât nicio formă de materie sau radiaţie nu poate scăpa din acesta. Regiunea din centru mai este cunoscută şi drept singularitate.</p>
+							<button class="more-info visibility-hidden animated" data-modal="modal-box5" data-animation-name="fadeInUp" data-animation-duration="1500ms">MAI MULT</button>
+						</div>
+						<div class="right-img col-5"></div>
+					</div>
+				</div>
+
+			</div>
+			
+		</section>
+
+
+
+
+
+		<!--===================
+		SECTIUNEA CURIOZITATI
+		====================-->
+		<section id="curiosities">
+			
+			<div class="inner">
+
+				<div class="title">
+					<h2>Ştiai că..?</h2>
+				</div>
+
+				<div class="lists row">
+
+					<div class="col-4">
+						<div class="list list1 visibility-hidden animated" data-animation-name="fadeInUp" data-animation-duration="1500ms">
+							<div class="left">
+								<i class="icon-distance"></i>
+							</div>
+							<div class="right">
+								<h4>Călătoria interstelară</h4>
+								<p>Ţi-ar lua cel puţin 19000 de ani să ajungi la cea mai apropiată stea aflată la 4 ani lumină.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-4">
+						<div class="list list2 visibility-hidden animated" data-animation-name="fadeInUp" data-animation-duration="1500ms" data-animation-delay="200ms">
+							<div class="left">
+								<i class="icon-jupiter"></i>
+							</div>
+							<div class="right">
+								<h4>Planeta Venus</h4>
+								<p>Orbitează în jurul soarelui în 225 de zile şi are o perioadă de rotaţie de 243 de zile.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-4">
+						<div class="list list3 visibility-hidden animated" data-animation-name="fadeInUp" data-animation-duration="1500ms" data-animation-delay="250ms">
+							<div class="left">
+								<i class="icon-satellite"></i>
+							</div>
+							<div class="right">
+								<h4>Voyager 1</h4>
+								<p>Este primul obiect spaţial creat de om care pătrunde în spaţiul interstelar.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-4">
+						<div class="list list4 visibility-hidden animated" data-animation-name="fadeInUp" data-animation-duration="1500ms" data-animation-delay="300ms">
+							<div class="left">
+								<i class="icon-quasar"></i>
+							</div>
+							<div class="right">
+								<h4>Quasari</h4>
+								<p>Sunt cele mai luminoase obiecte din Univers, de asemenea şi cele mai distante.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-4">
+						<div class="list list5 visibility-hidden animated" data-animation-name="fadeInUp" data-animation-duration="1500ms" data-animation-delay="350ms">
+							<div class="left">
+								<i class="icon-globe-grid"></i>
+							</div>
+							<div class="right">
+								<h4>Dimidium</h4>
+								<p>Prima exoplanetă a fost descoperită în 1995 orbitând în jurul stelei 51 Pegasi.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-4">
+						<div class="list list6 visibility-hidden animated" data-animation-name="fadeInUp" data-animation-duration="1500ms" data-animation-delay="400ms">
+							<div class="left">
+								<i class="icon-stars"></i>
+							</div>
+							<div class="right">
+								<h4>Bolta cerească</h4>
+								<p>Pe cerul nopţii se pot observa cu ochiul liber un număr aproximativ de 9096 de stele.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+
+
+
+
+		<!--===================
+		SECTIUNEA SISTEMUL SOLAR
+		====================-->
+		<section id="solar-system">
+			<div class="inner">
+				<div class="title">
+					<h2>Sistemul Solar</h2>
+					<p>Reprezintă un repertoriu, format din 9 planete împreună cu sateliții lor, comete și asteroizi, aflat în orbită în jurul Soarelui.</p>
+				</div>
+
+				<!-- Planete -->
+				<div class="first-section row">
+
+					<!-- Continutul din stanga -->
+					<div class="left-first col-5">
+						<h3>Planete</h3>
+						<p>O planetă este un corp ceresc cu o orbită eliptică în jurul unei stele și care are suficientă masă încât să asigure un echilibru hidrostatic.</p>
+					</div>
+
+					<!-- Continutul din dreapta -->
+					<div class="col-7 right-first">
+						<div class="planet earth visibility-hidden animated" data-animation-name="revealRight" data-animation-duration="1500ms" data-animation-delay="800ms"></div>
+						<div class="planet venus visibility-hidden animated" data-animation-name="revealRight" data-animation-duration="1500ms" data-animation-delay="1200ms"></div>
+						<div class="planet mercury visibility-hidden animated" data-animation-name="revealRight" data-animation-duration="1500ms" data-animation-delay="1600ms"></div>
+						<div class="planet sun visibility-hidden animated" data-animation-name="revealRightSun" data-animation-duration="1000ms"></div>
+					</div>
+
+				</div>
+
+				<!-- Comete -->
+				<div class="second-section row">
+
+					<!-- Continutul din stanga -->
+					<div class="left-second col-6 visibility-hidden animated" data-animation-name="fadeInDown" data-animation-duration="1500ms"></div>
+
+					<!-- Continutul din dreapta -->
+					<div class="right-second col-6">
+						<h3>Comete</h3>
+						<p>Cometele sunt bulgări cosmici de gaze înghețate, rocă și praf de mărimea unui oraș mic. În apropierea Soarelui, acestea se încălzesc formând o coadă din praf și gheață, care se întinde pe milioane de kilometri.</p>
+					</div>
+
+				</div>
+
+
+				<!-- Asteroizi -->
+				<div class="third-section row">
+
+					<!-- Continutul din stanga -->
+					<div class="left-third col-6">
+						<h3>Asteroizi</h3>
+						<p>Asteroizii sunt corpuri solide, mici care orbitează în jurul Soarelui. Majoritatea asteroizilor se găsesc între orbitele planetelor Marte și Jupiter, unde formează Centura de Asteroizi.</p>
+					</div>
+
+					<!-- Continutul din dreapta -->
+					<div class="right-third col-6 visibility-hidden animated" data-animation-name="fadeInDown" data-animation-duration="1500ms"></div>
+
+				</div>
+
+
+				<!-- Mai multe informatii -->
+				<div class="fourth-section row">
+					<div class="col-12">
+						<h3>Mai multe informații</h3>
+					</div>
+					
+					<div class="col-4">
+						<div class="item item1 more-info" data-modal="modal-box6">
+							<img src="img/item1.jpg">
+							<div class="overlay-item">
+								<div class="overlay-table">
+									<div class="overlay-tablecell">
+										<h4>Centura Kuiper</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-4">
+						<div class="item item2 more-info" data-modal="modal-box7">
+							<img src="img/item2.jpg">
+							<div class="overlay-item">
+								<div class="overlay-table">
+									<div class="overlay-tablecell">
+										<h4>Norul Oort</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-4">
+						<div class="item item3 more-info" data-modal="modal-box8">
+							<img src="img/item3.jpg">
+							<div class="overlay-item">
+								<div class="overlay-table">
+									<div class="overlay-tablecell">
+										<h4>Sateliții din Sistemul Solar</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+
+		<!--===================
+		FOOTER
+		====================-->
+		<footer>
+			<div class="inner">
+				<p>&copy; Copyright 2017 Startrix. Some Rights Reserved</p>
+				<p>Icons made by Flaticon from www.flaticon.com</p>
+			</div>
+		</footer>
+
+
+
+		<!--===================
+		MODAL BOX
+		====================-->
+
+
+
+
+			<!-- background-ul transparent care apare cand se deschide un modal box -->
+			<div class="overlay-modal"></div>
+
+			<!-- Modal box de la Galaxii -->
+			<div class="modal-box modal-box1 animated-modal">
+				<!-- imaginea(este in style.css) -->
+				<div class="modal-img"></div>
+
+				<!-- content -->
+				<div class="modal-content">
+					<div class="modal-inner">
+						<a class="close-modal more-info" data-modal="modal-box1"></a>
+						<h1>Galaxii</h1>
+						<p>După Big Bang, Universul era format din radiație și particule subatomice. Încă nu este clar ce s-a întâmplat după aceea: ori particulele s-au adunat cu încetul formând mai întâi stele, clustere de stele și galaxii, ori Universul a fost mai întâi organizat in "bulgări" imenși de materie și apoi subdivizat în galaxii.</p>
+
+						<p>Formarea galaxiilor este înfluențată de vecinătate și de ciocnirea lor. Însăși Calea Lactee, galaxia în care ne aflăm, se află pe un curs de coliziune cu cel mai apropiat vecin, galaxia Andromeda. Observând stelele din Andromeda, se denotă faptul că acestea sunt mai tinere decât cele din Calea Lactee – Astronomii spun că acest fapt se datorează unei ciocniri cu o altă galaxie, dacă nu mai multe. </p>
+
+						<h4>Clustere</h4>
+						<p>Grupele de galaxii și clustere sunt cele mai mari obiecte legate gravitațional observabile în Univers. Clusterele  conțin în jur de 3000 de galaxii. Grupele de galaxii se referă la clusterele mai mici, care conțin mai puțin de 50 de galaxii, iar cele mai mari clustere se numesc superclustere.</p>
+
+						<p>Clusterul Virgo, localizat în constelația Virgo, are mai mult de 1300 de galaxii. Calea Lactee se află într-un grup numit Grupul Local, conținând 40 de galaxii. Clusterul Virgo reprezintă centrul Superclusterului Local, din care face parte Grupul Local.</p>
+
+						<p>Clusterele sunt formate din galaxii, nori de gaz sau plasma si anti-materie .</p>
+
+						<p>Procentajele indică următoarele : </p>
+						<ul>
+							<li>Galaxii – 1%</li>
+
+							<li>Gaze intergalactice și mediul intracluster – 9%</li>
+
+							<li>Anti-materie sau materia întunecată – 90%</li>
+						</ul>
+
+						<p>Mediul intracluster reprezintă plasma supraîncălzită care susține un grup de galaxii. Plasma este formată în principal din ioni de hidrogen și heliu.</p>
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+
+			<!-- Modal box de la Stele -->
+			<div class="modal-box modal-box2 animated-modal">
+
+				<!-- imaginea(se afla in style.css) -->
+				<div class="modal-img"></div>
+
+				<!-- content -->
+				<div class="modal-content">
+					<div class="modal-inner">
+						<a class="close-modal more-info" data-modal="modal-box2"></a>
+						<h1>Stele</h1>
+
+						<p>Stelele sunt cele mai recunoscute obiecte astronomice, și reprezintă cea mai fundamentală parte din alcătuirea galaxiilor. Vechimea, distribuția și compoziția stelelor trasează istoria, dinamica și evoluția unei galaxii. Acestea sunt responsabile și pentru dispersarea numeroaselor elemente chimice precum carbonul, hidrogenul sau heliul. Astfel, studiul nașterii, vieții și morții unei stele reprezintă obiectul principal al astronomiei.</p>
+
+						<h4>Nașterea unei stele</h4>
+						<p>Stelele se nasc din norii de praf dispersați prin majoritatea galaxiilor. Cel mai comun exemplu al unui nor de praf îl reprezintă Nebuloasa Orion. O turbulență în interiorul acestor nori de praf formează "noduri" cu suficientă masă astfel încât gazele și praful să reacționeze violent sub acțiunea gravitației. Acest fenomen conduce la formarea protostelelor, care reprezintă nucleul din centrul gazelor și prafului care reacționează violent - ajungând intr-o zi prin combinări și arderi la stadiul de stele.</p>
+
+						<h4>Viața și destinul unei stele</h4>
+						<p>În general, cu cât o stea este mai mare, cu atât este mai scurtă viața ei, cu toate că înafară de cele gigantice, acestea trăiesc miliarde de ani. Când o stea a fuzionat tot hidrogenul din nucleul ei,toate reacțiile nucleare încetează. Astfel, apar fuziuni ale hidrogenului extranuclear, prin care steaua se mărește și se încălzește foarte tare, ceea ce conduce la apariția giganticelor roșii.</p>
+
+						<p>În funcție de mărimea nucleului, moartea unei stele se poate caracteriza prin:</p>
+						<ul>
+							<li>Stelele de mărime medie se transformă în pitice albe – corpuri de mărimea Pământului, dar care au o densitate foarte mare. Rămâne însă neștiut de ce acestea stagnează la acest stadiu. </li>
+
+							<li>Piticele albe se pot transforma în Nove, dacă acestea se află într-un sistem de 2 sau mai multe stele. Novele reprezintă stele noi, foarte strălucitoare, dar care își pierd volumul și energia în curs de câteva luni. </li>
+
+							<li>Stelele care au de 8 ori masa Soarelui sunt destinate să moară intr-o explozie foarte mare numită supernovă. </li>
+
+							<li>Dacă steaua aflată la baza unei supernove are în jur de 3 mase solare, atunci distrugerea se continuă până când protonii și electronii se combină și formează neutroni. Acest proces conduce la nașterea unei stele neutronice, care au o densitate foarte mare și o forță gravitațională imensă. </li>
+
+							<li>Găurile negre apar atunci când steaua are mai mult de 3 mase solare. Acestea reprezintă un corp de o densitate care tinde la infinit, a cărui gravitație este atât de puternică încât nimic nu poate scăpa din imediata apropiere. </li>
+
+						</ul>
+
+						<p>Resturile și praful lăsate în urmă de nove și supernove se vor îmbina intr-un final cu gazele și praful interstelar, îmbogățind noua compoziție cu elemente chimice grele produse de moartea stelară. Eventual, acele materiale vor fi reciclate, formându-se ulterior o nouă generație de stele. </p>
+					</div>
+				</div>
+
+			</div>
+
+
+			<!-- Modal box de la Sisteme planetare -->
+			<div class="modal-box modal-box3 animated-modal">
+
+				<!-- imaginea(se afla in style.css) -->
+				<div class="modal-img"></div>
+
+				<!-- content -->
+				<div class="modal-content">
+					<div class="modal-inner">
+						<a class="close-modal more-info" data-modal="modal-box3"></a>
+						<h1>Sisteme planetare</h1>
+
+						<p>Planeta Pământ face parte din Sistemul Solar – sistem format din Soare și alte obiecte (planete, asteroizi, comete, sateliți)</p>
+
+						<p>Până de curând unicul sistem planetar descoperit era chiar Sistemul Solar, însă odată cu descoperire primei exoplanete, Dimidium, în 1995, acestea au început să fie descoperite abundent – se crede că aproximativ fiecare stea are în jur de 5 planete care orbitează în jurul ei.</p>
+
+						<p>Cel mai cunoscut sistem planetar este Sistemul Kepler-62 – în care s-au descoperit doua planete aflate în zona locuibilă ( Kepler-62e si Kepler-62f )</p>
+
+						<p>Kepler-62f are 40% din mărimea Terrei și este de tip telurică , concluzie la care s-a ajuns prin asociere.
+						Kepler-62e are 60% din mărimea Terrei , tot de tip telurică.</p>
+                
+                		<h4>Viața</h4>
+						<p>Științific vorbind, aceasta reprezintă o înlănțuire de atomi de carbon, împreună cu alți atomi precum azotul și fosforul. Unii pot specula că pot crea viața cu alte chimicale, de exemplu siliconul, însă carbonul rămâne cea mai convenabilă variantă pentru viața apărută spontan. Acești atomi se găsesc preponderent pe planetele telurice, așa cum este și Pământul.</p> 
+
+						<h4>Viața pe alte planete</h4>
+						<p>Din următoarele date: fiecare stea are în medie 5 planete, dintre care de obicei 2 sau 3 sunt telurice, fiecare galaxie are in jur de 100 de milione de stele, iar în Univers există un număr mai mare de 10 miliarde de galaxii. Aceste calcule au fost realizate de astronomi, fără a se ține seama de posibilii sateliți ai fiecarei planete - probabilitatea spune că este foarte posibil ca viața să existe și pe exoplanete (planete aflate în afara sistemului solar).</p>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Modal box de la Teoria Big Bang -->
+			<div class="modal-box modal-box4 animated-modal">
+
+				<!-- imaginea(se afla in style.css) -->
+				<div class="modal-img"></div>
+
+				<!-- content -->
+				<div class="modal-content">
+					<div class="modal-inner">
+						<a class="close-modal more-info" data-modal="modal-box4"></a>
+						<h1>Teoria Big Bang</h1>
+
+						<p>Big Bang-ul este modelul cosmologic care explică condițiile inițiale și dezvoltarea ulterioară a Universului. Acest model este susținut de explicațiile cele mai complete și corecte din punct de vedere științific. Termenul de Big Bang, în general, se referă la ideea că Universul s-a extins de la o singularitate primordială fierbinte și densă acum aproximativ 13.8 miliarde de ani.</p>
+
+						<p>Astronomii combină modelele matematice cu observaţiile fizice pentru a dezvolta teorii corecte în ceea ce priveşte naşterea Universului. Bazele matematice ale Teoriei Big Bang includ teoria generală a relativităţii lui Albert Einstein împreună cu alte teorii fundamentale.</p>
+
+						<p>Teoriile fizice spun că dacă ar fi să privim în trecut la doar o secundă dupa Big Bang, am putea să vedem un întreg "ocean" aflat la o temperatură de 1 miliard de grade Celsius de particule : neutroni, protoni, electroni, anti-electroni, fotoni şi neutrino. Pe masură ce s-au racit, particulele au inceput să se combine formând atomi. Abia după formarea atomilor, Universul a început să fie transparent, până la acel moment acesta fiind opac datorită electronilor liberi ce nu permiteau fotonii să circule.</p>
+
+						<p>Urme ale radiaţiei produse de Big Bang pot fi observate astăzi ca şi Radiaţia cosmică de fundal.
+						Recombinarea particulelor a condus împreună cu o sursa de instabilitate la expansiunea subită a Universului, astfel că după aproximativ 380.000 de ani de recombinări şi fluctuaţii cuantice, acesta se afla într-o continuă expansiune şi răcire.</p>
+
+						<p>Acea sursă de instabilitate, precum şi motivul pentru care cercetatorii cred că Universul se află într-o expansiune accelerată, a fost numită Energie întunecată/Anti-materie. </p>
+					</div>
+				</div>
+
+			</div>
+
+
+			<!-- Modal box de la Gaurile Negre -->
+			<div class="modal-box modal-box5 animated-modal">
+
+				<!-- imaginea(se afla in style.css) -->
+				<div class="modal-img"></div>
+
+				<!-- content -->
+				<div class="modal-content">
+					<div class="modal-inner">
+						<a class="close-modal more-info" data-modal="modal-box5"></a>
+						<h1>Găurile negre</h1>
+
+					<p>O gaură neagră reprezintă un spațiu unde forța de atracție este atât de mare încât nici lumina nu poate scăpa. Gravitația este atât de puternică încât materia este restrânsă într-un spațiu foarte mic.</p>
+
+					<p>Găurile negre apar atunci când o stea moare. Acestea nu se pot observa cu telescoapele normale deoarece nu emit lumină, ci o absorb. Sunt practic invizibile. Ele pot fi găsite cu ajutorul unor instrumente care diferențiază comportamentul stelelor aflate în vecinătatea lor față de cele normale.</p>
+
+					<p>Există 3 tipuri de găuri negre: supermasive, intermediare și stelare.</p>
+
+					<h4>Găurile Supermasive</h4>
+					<p>Acestea sunt de milioane de ori, poate chiar miliarde, mai masive decât Soarele, însă au un diametru apropiat de cel al Pământului. Se crede că astfel de găuri negre se află în centrul fiecărei galaxii.</p>
+
+					<h4>Găurile intermediare</h4>
+					<p>Aceste găuri se formează prin coliziunea mai multor stele dintr-un cluster. Coliziunile pot conduce chiar și la formarea acelor găuri negre din centrul galaxiilor, întrucât astronomii au descoperit mai mult astfel de găuri negre intermediare sub forma unor galaxii de tip spirală.</p>
+
+					<h4>Găurile stelare</h4>
+					<p>Atunci când o stea suficient de masivă rămâne fără combustibil, aceasta se prăbușește sub propria masă și gravitație, dând naștere acestui tip de singularități.</p>
+
+					<p>Găurile negre nu absorb, precum ar crede unii, ci ele atrag obiectele care eventual cad în interiorul lor atunci când depășesc orizontul de evenimente.</p>
+
+					<p>Alcătuirea lor este relativ simplă, acestea conținând un orizont al evenimentelor (ultima parte din care lumina poate scăpa) și singularitatea, care se află în centrul găurile negre și locul în care fizica cuantică susține faptul că particulele și antipart.</p>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Modal box de la Centura Kuiper -->
+			<div class="modal-box modal-box6 animated-modal">
+
+				<!-- imaginea(se afla in style.css) -->
+				<div class="modal-img"></div>
+
+				<!-- content -->
+				<div class="modal-content">
+					<div class="modal-inner">
+						<a class="close-modal more-info" data-modal="modal-box6"></a>
+						<h1>Centura Kuiper</h1>
+
+						<p>Centura Kuiper este o regiune care cuprinde corpuri înghețate în forma de disc, aflată dincolo de orbita planetei Neptun. Planeta pitică Pluto este cel mai cunoscut obiect din această regiune. Cometele din Centura Kuiper parcurg o orbită completă în jurul Soarelui în mai puțin de 200 de ani. Obiectele din această regiune sunt probabil rămășițele de la formarea Sistemului Solar acum 4.6 miliarde de ani.</p>
+
+						<p>Despre Centura Kuiper nu se știa nimic până în 1992, când perechea de cercetători Dave Jewitt și Jane Luu au descoperit numeroase obiecte la marginea Sistemului Solar, unde inițial se credea ca nu se află nimic. De atunci, astronomii continuă să găsească noi obiecte de mărimi considerabile, numite ulterior planete pitic, cum ar fi: Ceres, Haumea și Eris.</p>
+
+						<p>Centura de asteroizi, comete și planete pitice a fost numită după Gerard Kuiper, care în 1951 a prezis că dincolo de Neptun se află o regiune plină de corpuri înghețate, care ar explica de ce unele comete sunt periodice la câteva zeci de ani. </p>
+					</div>
+				</div>
+
+			</div>
+
+
+			<!-- Modal box de la Norul Oort -->
+			<div class="modal-box modal-box7 animated-modal">
+
+				<!-- imaginea(se afla in style.css) -->
+				<div class="modal-img"></div>
+
+				<!-- content -->
+				<div class="modal-content">
+					<div class="modal-inner">
+						<a class="close-modal more-info" data-modal="modal-box7"></a>
+						<h1>Norul Oort</h1>
+
+						<p>Se crede a fi un balon dens din resturi înghețate care înconjoară Sistemul Solar. Acest nor se întinde pe o treime a distanței de la Soare la cea mai apropiată stea. Astronomul olandez Jan Oort a propus pentru prima dată existența acestei regiuni care ar explica originea cometelor cărora le ia sute, poate chiar ani să orbiteze Soarele. Aceste comete sunt periodice de lungă durată.</p>
+
+						<p>Ar putea fi miliarde de corpuri înghețate în Norul Oort. Câteodată, o perturbație le împing către Soare – astfel că recent, s-au descoperit două comete ISON și Siding Spring care originează din această regiune din spațiu.</p>
+
+						<p>Teoria care explică cel mai bine prezenta locație a Norului Oort prezintă un model astronomic, în care pe măsură ce planetele s-au format și au migrat către curenta lor locație, acestea au împins corpurile către regiunile exterioare ale Sistemului Solar.</p>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Modal box de la Satelitii din sistemul solar-->
+			<div class="modal-box modal-box8 animated-modal">
+
+				<!-- imaginea(se afla in style.css) -->
+				<div class="modal-img"></div>
+
+				<!-- content -->
+				<div class="modal-content">
+					<div class="modal-inner">
+						<a class="close-modal more-info" data-modal="modal-box8"></a>
+						<h1>Sateliții</h1>
+
+						<p>Aceștia se regăsesc în diverse forme și mărimi. În general, sunt corpuri soilde cu sau fără atmosferă. Sateliții planetari s-au format din discurile de praf și gaze care orbitau în jurul planetelor din Sistemul Solar timpuriu.</p>
+
+						<p>Dintre planetele telurice, Mercur și Venus nu au deloc sateliți, Pământul are unul singur, iar Marte are doi. Planetele gazoase găzduiesc fiecare numeroși sateliți:</p>
+						<ul>
+							<li><strong>Jupiter</strong> are 69 de sateliți, fiind planeta care găzduiește cele mai multe astfel de corpuri. Sateliți notabili: Io, Europa, Ganymede, Callisto.</li>
+
+							<li><strong>Saturn</strong> are cel puțin 62 sateliți, dintre care: Titan, Rhea, Enceladus și Tethys.</li>
+
+							<li><strong>Uranus</strong> are în jur de 27 de sateliți. Cei mai mari sunt: Miranda, Umbriel, Ariel și Puck.</li>
+							
+							<li><strong>Neptun</strong> prezintă 14 sateliți, dintre care notabili: Triton, Nereid și Proteus. </li>
+						</ul>
+
+						<p>Cel mai mare satelit din Sistemul Solar este Ganymede.</p>
+					
+					</div>
+				</div>
+			</div>
+
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script> <!-- libraria jquery -->
+		<script type="text/javascript" src="js/main.js"></script> <!-- fisierul principal unde am scris codul jquery -->
+	</body>
+</html>

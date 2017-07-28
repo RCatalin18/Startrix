@@ -1,0 +1,1375 @@
+/* ===================== 
+
+CONTINUT:
+
+
+1. GENERAL STYLE
+
+2. BARA DE NAVIGARE
+
+3. SECTIUNEA BANNER
+
+4. SECTIUNEA DESPRE UNIVERS
+
+5. SECTIUNEA CURIOZITATI
+
+6. SECTIUNEA SISTEMUL SOLAR
+
+7. FOOTER
+
+8. MODAL BOX	
+
+===================== */
+
+
+
+
+
+/*=================== 
+GENERAL STYLE
+=====================*/
+body,html {
+	font-family: 'Raleway', sans-serif;	
+}
+
+body {
+	overflow-y: scroll; 
+}
+
+a {
+	text-decoration: none !important;
+}
+
+h2 {
+	font-size: 36px;
+	font-weight: 300;
+	color: #282828;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+
+strong {
+	color: #000;
+}
+
+*:focus {
+	outline: none;
+}
+
+
+
+/* Selection */
+::selection { 
+	background: #37c6f5;
+	color: #fff;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar-track {
+	display: none;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #009cff;
+	
+}
+
+/* loading */
+.loading {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: white url(../img/loading.gif) no-repeat center center;
+	z-index: 2000;
+}
+/* ===General Style */
+
+
+
+
+
+/*=================== 
+BARA DE NAVIGARE
+=====================*/
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: rgba(22, 38, 51, 0.4);
+	transition: background-color 600ms ease;
+	z-index: 1000;
+}
+
+
+.nav-color {
+	/* aceasta clasa se adauga si se elimina din main.js */
+	background-color: rgba(55, 198, 245, 0.95);
+}
+
+
+.logo {
+	display: inline-block;
+	width: 90px;
+	margin: 33px 0;
+	padding: 0px 15px;
+}
+
+
+nav ul {
+	float: right;
+	padding: 33px 0;
+}
+
+
+nav ul li {
+	display: inline-block;
+	padding: 0 25px;
+}
+
+
+nav ul li:last-child {
+	padding-right: 15px;
+}
+
+
+nav ul li a {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+/* subliniere link */
+nav ul li a::after {
+	padding-bottom: 5px; 
+	display:block;
+  	content: '';
+  	border-bottom: 2px solid #fff; 
+  	transform: scaleX(0);  
+  	transition: transform 250ms ease-in-out;
+}
+
+nav ul li a:hover::after { transform: scaleX(1); }
+
+nav ul li .selected::after {
+	padding-bottom: 5px; 
+	display:block;
+  	content: '';
+  	border-bottom: 2px solid #fff; 
+  	transform: scaleX(1);   
+}
+/*=== subliniere link */
+
+
+/* butonul toggle de la bara de navigare cand latimea site-ului este mai mica sau egala decat 768px */
+nav button {
+	position: relative;
+	display: none;
+	float: right;
+	padding: 1px 2px;
+	width: 40px;
+	height: 40px;
+	margin: 20px 0 30px;
+	background: none;
+	border: 1px solid #fff;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+nav button:focus {
+	outline: 0;
+}
+
+nav button .menu {
+	width: 20px;
+	height: 3px;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: 300ms ease-in-out;
+	
+}
+
+.menu::before,
+.menu::after {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 3px;
+	background-color: #fff;
+	transition: 500ms ease-in-out;
+}
+
+.menu::before {
+	top: -7px;
+	left: 0px;
+}
+
+.menu::after {
+	top: 7px;
+	left: 0px;
+}
+
+nav button.active-menu .menu {
+	background-color: rgba(0,0,0,0);
+}
+
+nav button.active-menu .menu::before {
+	top: 0;
+	transform: rotate(45deg);
+}
+
+nav button.active-menu .menu::after {
+	top: 0;
+	transform: rotate(135deg);
+}
+/*=== buton toggle */
+
+
+@media only screen and (max-width: 900px) {
+	.logo {
+		width: 100%;
+		position: relative;
+		left: 45%;
+		margin-bottom: 0px;
+	}
+	nav ul {
+		width: 100%;
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	nav .inner {
+		position: relative;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	.logo {
+		width: 90px;
+		position: static;
+	}
+
+	nav ul {
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 90px;
+		margin-top: 0px;
+		margin-bottom: 0;
+		background-color: #fff;
+		width: 100%;
+		opacity: 0.98;
+		padding-top: 0;
+		padding-bottom: 60px;
+		/*box-shadow: 0 2px 3px #696969;*/
+	}
+
+	nav ul li {
+		display: block;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-top: 14px;
+		text-align: right;
+		padding-left: 0;
+		padding-right: 0;	
+
+	}
+
+	nav ul li:first-child {
+		margin-top: 10px;
+	}
+
+	nav ul li a {
+		width: 100%;
+		position: absolute;
+		display: block;
+		color: #37c6f5;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 30px;
+		padding-right: 30px;
+		text-align: center;
+		-webkit-transition: background-color 100ms ease-in-out;
+		transition: background-color 100ms ease-in-out;
+	}
+
+	nav ul li a:after {
+		border: none;
+	}
+
+	nav ul li a:hover:after {
+		border: none;
+	}
+
+	nav ul li a:hover {
+		width: 100%;
+		background-color: #37c6f5;
+	}
+
+	nav ul li a:hover {
+		color: white;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	nav ul li .selected {
+		background-color: #37c6f5;
+		color: #fff;
+	}
+
+	nav ul li .selected:after {
+		border: none;
+	}
+	nav button {
+		display: block;
+	}
+}
+
+
+/*=================== 
+SECTIUNEA BANNER
+=====================*/
+#banner {
+	text-align: center;
+	color: #fff;
+	background: #001929 url("../img/banner.jpg") no-repeat center center;
+	background-size: cover;
+	padding-top: 250px;
+	padding-bottom: 180px; 
+}
+
+
+#banner h1 {
+	display: inline-block;
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 60px;
+	max-width: 960px;
+}
+
+
+#banner p {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 30px;	
+	max-width: 780px;
+	margin-top: 45px;
+	
+}
+
+
+#banner .button {
+	margin-top: 45px;
+}
+
+
+#banner .banner-button {
+	border-radius: 24px;
+	-webkit-border-radius: 24px;
+	-moz-border-radius: 24px;
+	padding: 14px 30px;
+	background-color: #37c6f5;
+	color: white;
+	font-size: 12px;
+	font-weight: 600;
+	transition: background-color 400ms ease-in-out, color 400ms ease-in-out;
+	-webkit-transition: background-color 400ms ease-in-out, color 400ms ease-in-out;
+	cursor: pointer;
+}
+
+
+#banner .banner-button:hover {
+	background-color: white;
+	color: #282828;
+}
+
+
+#banner {
+	position: relative;
+}
+
+
+/* mouse scroll */
+.mouse-scroll {
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	width: 30px;
+	height: 45px;
+	margin-left: -15px;
+  	box-shadow: inset 0 0 0 1px #fff;
+  	border-radius: 25px;
+}
+
+
+.mouse-scroll:before {
+	position: relative;
+	content: '';
+	display: inline-block;
+	width: 4px;
+	height: 5px;
+	background-color: #fff;
+	border-radius: 4px;
+	transition: width 2000ms;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-name: mouse-scroll;
+}
+/*=== mouse scroll */
+
+@media only screen and (max-width: 300px) {
+	#banner h1 {
+		font-size: 40px;
+	}
+
+	#banner p {
+		font-size: 16px;
+	}
+}
+
+/*=================== 
+SECTIUNEA DESPRE UNIVERS
+=====================*/
+
+/* Ce este Universul */
+#universe {
+	padding-top: 130px;
+	padding-bottom: 130px;
+}
+
+#universe .title {
+	text-align: center;
+}
+
+#universe .title p {
+	margin-top: 30px;
+	margin-bottom: 70px;
+	max-width: 560px;
+	display: inline-block;
+	line-height: 24px;
+	color: #959595;
+}
+
+.boxes .box {
+	padding: 40px 15px;
+	text-align: center;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 4px;	
+	-moz-border-radius: 4px;
+	transition: background 400ms ease-out, border 400ms ease-in-out;
+}
+
+.boxes .box:hover {
+	border: 1px solid #37c6f5;
+}
+
+.boxes .box:hover  i {
+	color: #37c6f5;
+}
+
+.boxes .box i {
+	display: block;
+	font-size: 50px;
+	color: #ccc;
+	margin-bottom: 30px;
+	transition: all 400ms ease-in-out;
+}
+
+.boxes .box h4 {
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.boxes .box p {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 24px;
+	margin-bottom: 20px;
+	color: #959595;
+	min-height: 100px; 	
+}
+
+.boxes .box a {
+	display: inline-block;
+	background: none;
+	border: 1px solid #ddd;
+	border-radius: 24px;
+	padding: 14px 25px;
+	font-size: 12px;
+	font-weight: 600;
+	color: #626262;
+	transition: background-color 400ms ease-in-out, color 400ms ease-in-out;
+	-webkit-transition: background-color 400ms ease-in-out, color 400ms ease-in-out, border 400ms ease-in-out;
+	cursor: pointer;
+}
+
+.boxes .box a:hover {
+	background-color: #37c6f5;
+	border: 1px solid #37c6f5;
+	color: #fff;
+}
+
+
+@media only screen and (max-width: 1060px) {
+	.boxes .col-4 {
+		width: 50% !important;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.boxes .col-4 {
+		width: 100% !important;
+	}
+
+	#universe .inner {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	#universe .inner {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+/* teorii */
+#theories h3 {
+	font-size: 36px;
+	font-weight: 300;
+	line-height: 48px;
+	padding-bottom: 40px;
+	color: #282828;
+}
+
+#theories p {
+	font-size: 16px;
+	font-weight: 300;
+	color: #959595;
+	line-height: 30px;
+	padding-bottom: 50px;
+}
+
+#theories button {
+	border: 2px solid #37c6f5;
+	border-radius: 24px;
+	padding: 14px 30px;
+	background: rgba(255, 255, 255, 0);
+	color: #37c6f5;
+	font-size: 12px;
+	font-weight: 600;
+	transition: background-color 400ms ease-in-out, color 400ms ease-in-out;
+	-webkit-transition: background-color 400ms ease-in-out, color 400ms ease-in-out;
+	cursor: pointer;
+}
+
+#theories button:hover {
+	background-color: #37c6f5;
+	border: 2px solid #37c6f5;
+	color: #fff;
+}
+
+
+
+
+/* Teoria Big Bang */
+#big-bang {
+	position: relative;
+	background-color: #f8f8f8;
+}
+
+#big-bang .left-img {
+	position: absolute;
+	display: block;
+	width: 50%;
+	height: 100%;
+	left:0;
+	top:0;
+	background: #62a6c9 url("../img/big-bang.jpg") repeat-x center center;
+	z-index: 60;
+}
+
+#big-bang .right-text {
+	padding-top: 120px;
+	padding-bottom: 120px;
+	float: right;
+	z-index: 100;
+}
+
+
+/* Gaurile Negre */
+#black-hole {
+	position: relative;
+	background-color: #fff; 
+}
+
+#black-hole .left-text {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+#black-hole .right-img {
+	position: absolute;
+	display: block;
+	width: 50%;
+	height: 100%;
+	right:0;
+	top:0;
+	background: #62a6c9 url("../img/black-hole.jpg") repeat-x 40% 35%;
+	z-index: 60;
+}
+
+@media only screen and (min-width: 2000px) {
+	#black-hole .right-img {
+		background: #62a6c9 url("../img/black-hole.jpg") repeat-x 0% 35%;
+	}
+}
+
+
+@media only screen and (max-width: 1000px) {
+	#theories {
+		text-align: center;
+	}
+
+	#big-bang, #black-hole {
+		padding-top: 50%;
+	}
+
+	#big-bang .left-img, #black-hole .right-img  {
+		position: absolute;
+		width: 100%;
+		height: 50%;
+		
+	}	
+	#big-bang .right-text, #black-hole .left-text {
+		width: 100%;
+		padding-top: 150px;
+	}
+}
+
+@media only screen and (max-width: 668px) {
+	#big-bang, #black-hole {
+		padding-top: 80%;
+	}
+	#black-hole .right-img {
+		background-position: 55% center;
+	}
+}
+
+@media only screen and (max-width: 460px) {
+	#big-bang, #black-hole {
+		padding-top: 160%;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	#big-bang, #black-hole {
+		padding-top: 240%;
+	}
+
+	#black-hole .right-img {
+		background-size: auto 100%;
+	}
+}
+
+/*=================== 
+SECTIUNEA CURIOZITATI
+=====================*/
+#curiosities {
+	padding-top: 130px;
+	padding-bottom: 130px;
+	background-color: #f8f8f8;
+}
+
+#curiosities .title h2 {
+	text-align: center;
+	padding-bottom: 80px;
+}
+
+
+.lists .list .left {
+	float: left;
+}
+
+.lists .list .left i {
+	display: block;
+	font-size: 40px;
+	color: #37c6f5;
+	transform: scale(1);
+	transition: all 300ms ease-in-out;
+}
+
+.lists .list:hover i {
+	transform: scale(1.2);
+}
+
+.lists .list .right {
+	margin-left: 80px;
+}
+
+.lists .list h4 {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 26px;
+	color: #282828;
+	padding-bottom: 10px;
+}
+
+.lists .list p {
+	color: #959595;
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: 300;
+	min-height: 80px;
+	overflow: hidden;	
+}
+
+@media only screen and (max-width: 1200px) {
+	#curiosities .lists .col-4 {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	#curiosities .lists .col-4 {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	#curiosities .inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.lists .list .right {
+		margin-left: 70px;
+	}
+}
+
+
+
+
+
+/*=================== 
+SECTIUNEA SISTEMUL SOLAR
+=====================*/
+#solar-system {
+	background-color: white;
+}
+
+#solar-system h3 {
+	padding-bottom: 20px;
+	font-size: 36px;
+	font-weight: 300;
+	line-height: 48px;
+	color: #282828;
+}
+
+#solar-system p {
+	font-size: 16px;
+	font-weight: 300;
+	color: #959595;
+	line-height: 30px;
+}
+
+#solar-system .inner {
+	padding-top: 130px;
+	padding-bottom: 130px;
+}
+
+#solar-system .title {
+	text-align: center;
+	padding-bottom: 130px;
+}
+
+#solar-system .title h2 {
+	padding-bottom: 30px;
+}
+
+#solar-system .title p {
+	max-width: 560px;
+	display: inline-block;
+	line-height: 24px;
+	color: #959595;
+}
+
+/* first section */
+#solar-system .first-section {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 130px;
+}
+
+#solar-system .first-section .right-first {
+	padding-right: 0 !important;
+	padding-left: 60px;
+	float: right;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.planet {
+	display: inline-block;
+}
+
+.earth {
+	background-color: #37c6f5;
+	background: url("../img/earth.png") no-repeat center center;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	width: 71px;
+	height: 71px;
+}
+
+.venus {
+	background-color: #f7941d;
+	background: url("../img/venus.png") no-repeat 45% 45%;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	width: 60px;
+	height: 60px;
+}
+
+.mercury {
+	background-color: #9b8578;
+	background: url("../img/mercury.png") no-repeat center center;
+	background-size: 100% auto;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	width: 33px;
+	height: 33px;
+}
+
+.sun {
+	background: url("../img/sun.png") no-repeat -15% center;
+	background-size: 200% auto;
+	border-bottom-left-radius: 266px;
+  	border-top-left-radius: 266px;
+  	-webkit-border-bottom-left-radius: 266px;
+  	-webkit-border-top-left-radius: 266px;
+  	-moz-border-bottom-left-radius: 266px;
+  	-moz-border-top-left-radius: 266px;
+	width: 133px;
+	height: 266px;
+	z-index: 1;
+}
+
+
+@media only screen and (max-width: 960px) {
+	#solar-system .first-section .left-first {
+		width: 100%;
+		text-align: center;
+		padding-top: 60px;
+	}
+
+	#solar-system .first-section .right-first {
+		width: 100%;
+		order: -1;
+		padding-left: 0;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.earth {
+	background-color: #37c6f5;
+	background-size: 51px auto;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	width: 51px;
+	height: 51px;
+}
+
+	.venus {
+		background-color: #f7941d;
+		border-radius: 50%;
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+		width: 44px;
+		height: 44px;
+	}
+
+	.mercury {
+		background-color: #9b8578;
+	    border-radius: 50%;
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+	    width: 13px;
+	    height: 13px;
+	}
+
+	.sun {
+	    border-bottom-left-radius: 266px;
+  	    border-top-left-radius: 266px;
+  	    -webkit-border-bottom-left-radius: 266px;
+  	    -webkit-border-top-left-radius: 266px;
+  	    -moz-border-bottom-left-radius: 266px;
+  	    -moz-border-top-left-radius: 266px;
+	    width: 113px;
+	    height: 226px;
+	}
+}
+
+
+@media only screen and (max-width: 350px) {
+	.earth {
+	background-color: #37c6f5;
+
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	width: 41px;
+	height: 41px;
+}
+
+	.venus {
+		background-color: #f7941d;
+		border-radius: 50%;
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+		width: 34px;
+		height: 34px;
+	}
+
+	.mercury {
+		background-color: #9b8578;
+	    border-radius: 50%;
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+	    width: 10px;
+	    height: 10px;
+	}
+
+	.sun {
+	    border-bottom-left-radius: 266px;
+  	    border-top-left-radius: 266px;
+  	    -webkit-border-bottom-left-radius: 266px;
+  	    -webkit-border-top-left-radius: 266px;
+  	    -moz-border-bottom-left-radius: 266px;
+  	    -moz-border-top-left-radius: 266px;
+	    width: 103px;
+	    height: 206px;
+	}
+}
+
+
+/* second section */
+#solar-system .second-section {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 130px;
+}
+
+#solar-system .second-section .left-second {
+	height: 169px;
+	background: url("../img/comet.png") no-repeat center center;
+	background-size: 169px 169px;
+}
+
+
+@media only screen and (max-width: 960px) {
+	#solar-system .second-section .left-second {
+		width: 100%;
+	}
+
+	#solar-system .second-section .right-second {
+		width: 100%;
+		text-align: center;
+		padding-top: 60px;
+	}
+
+	
+}
+
+
+/* third section */
+#solar-system .third-section {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 130px;
+    
+}
+
+
+#solar-system .third-section .right-third {
+	height: 169px;
+	background: url("../img/asteroid.png") no-repeat center center;
+	background-size: 169px 169px;
+}
+
+
+@media only screen and (max-width: 960px) {
+	#solar-system .third-section .left-third {
+		width: 100%;
+		text-align: center;
+		padding-top: 60px;
+
+	}
+
+	#solar-system .third-section .right-third {
+		width: 100%;
+		order: -1;
+	}
+
+}
+
+
+/* fourth section */
+#solar-system .fourth-section .item img {
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: all 1s ease-in-out;
+}
+
+#solar-system .fourth-section .item {
+	position: relative;
+	overflow: hidden;
+
+}
+
+#solar-system .overlay-item {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(55,198,245,0.6);
+	transition: all .6s ease-in-out;
+	cursor: pointer;
+}
+
+.overlay-table {
+	width: 100%;
+	height: 100%;
+	display: table;
+	text-align: center;
+}
+
+
+.overlay-tablecell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.overlay-item h4 {
+	font-size: 20px;
+	color: #fff;
+	font-weight: 300;
+}
+
+.item:hover .overlay-item {
+	opacity: 0;
+}
+
+.item:hover img {
+	transform: scale(1.5);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+	#solar-system .fourth-section .col-4 {
+		width: 100%;
+	}	
+}
+
+
+/*=================== 
+FOOTER
+=====================*/
+footer {
+	background-color: #162633;
+}
+
+
+footer p {
+	padding: 20px 10px;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 300;
+	color: #fff;
+}
+
+footer p:first-child {
+	float: left;
+}
+
+footer p:last-child {
+	text-align: right;
+}
+
+@media only screen and (max-width: 520px) {
+
+	footer p:first-child {
+		float: none;
+		text-align: center;
+		padding-bottom: 10px;
+	}
+
+	footer p:last-child {
+		text-align: center;
+		padding-top: 10px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/*=================== 
+MODAL BOX
+=====================*/
+
+.overlay-modal {
+	display: none;
+	position: fixed;
+	left:0;
+	top:0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0, 0, 0.6);
+	z-index: 1999;
+}
+
+.overlay-modal-active {
+	display: block;
+}
+
+.disable-scroll {
+	overflow-y: hidden;
+}
+
+.modal-box {
+	display: none;
+	max-width: 900px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -450px;
+	margin-top: -225px;
+	background-color: #fff;
+	z-index: 2000;
+	box-shadow: 0 0 30px rgba(0, 0, 0,.2);
+	text-align: justify;
+	height: 450px;
+}
+
+
+.modal-img {
+	float: left;
+	width: 400px;
+	height: 100%;
+}
+
+
+/* imaginile de la fiecare modal box */
+.modal-box1 .modal-img {
+	background: url('../img/more-info1.png');
+}
+
+.modal-box2 .modal-img {
+	background: url('../img/more-info2.png');
+}
+
+.modal-box3 .modal-img {
+	background: url('../img/more-info3.png');
+}
+
+.modal-box4 .modal-img {
+	background: url('../img/more-info4.png');
+}
+
+.modal-box5 .modal-img {
+	background: url('../img/more-info5.png');
+}
+
+
+.modal-box6 .modal-img {
+	background: url('../img/more-info6.png');
+}
+
+.modal-box7 .modal-img {
+	background: url('../img/more-info7.png');
+}
+
+.modal-box8 .modal-img {
+	background: url('../img/more-info8.png');
+}
+
+
+
+.modal-content {
+	float: left;
+	width: 500px;
+	height: 100%;
+	overflow-y: scroll;
+
+}
+
+
+.modal-box .modal-inner {
+	padding: 40px;
+}
+
+
+/* butonul close(X) */
+.close-modal {
+	position: absolute;
+	top: 10px;
+	right: 12px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	transition: 300ms all ease-in-out;
+}
+
+.close-modal:after, .close-modal:before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 20px;
+    height: 4px;
+    background-color: black;
+}
+
+.close-modal:before {
+	transform: rotate(45deg);
+}
+
+.close-modal:after {
+	transform: rotate(135deg);
+}
+
+.close-modal:hover {
+	transform: scale(1.2);
+}
+
+
+.modal-box h1 {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+
+.modal-box h4 {
+	margin-bottom: 5px;
+}
+
+.modal-box p {
+	margin-bottom: 15px;
+	font-size: 16px;
+	line-height: 24px; 
+	color: #959595;
+	font-weight: 300;
+}
+
+.modal-box ul li {
+	font-size: 16px;
+	width: 94%;
+	padding-bottom: 20px;
+	margin-left: 20px;
+	list-style-type: square;
+	list-style-position: outside;
+	line-height: 24px;
+	text-align: justify;
+	color: #959595;
+}
+
+
+@media only screen and (max-width: 900px) {
+	.modal-box {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		margin-left: -0px;
+		margin-top: -0px;
+		left: 0;
+		top: 0;
+	}
+
+	.modal-img {
+		display: none;
+	}
+
+	.modal-content {
+		float: none;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background-color: #fff;
+	}
+
+	.close-modal {
+		position: fixed;
+	}
+}	
+
+@media only screen and (max-width: 900px) {
+	
+}
+
+@media only screen and (max-width: 500px) {
+	.modal-box .modal-inner {
+		padding: 15px 40px 15px 15px;
+	}
+}

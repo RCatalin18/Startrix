@@ -1,0 +1,215 @@
+.visibility-hidden {
+	visibility: hidden;
+}
+
+.animated {
+  /* aceasta clasa seteaza cat timp sa tina o animatie cand e activata */
+	-webkit-animation-duration: 0s;
+   animation-duration: 0s;
+   animation-delay: 0s;
+   -webkit-animation-delay: 0s;
+   animation-iteration-count: 1;
+   -webkit-animation-iteration-count: 1;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both; 
+}
+
+
+.animated-modal {
+  /* animatia de la modal box */
+  -webkit-animation-duration: 500ms;
+   animation-duration: 500ms;
+   animation-delay: 0s;
+   -webkit-animation-delay: 0s;
+   animation-iteration-count: 1;
+   -webkit-animation-iteration-count: 1;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+
+/* animatia de la iconita mouse scroll din banner */
+@-webkit-keyframes mouse-scroll {
+            0% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+            100% {opacity: 0;
+                  transform: translateY(10px);
+            }   
+        }
+
+        @keyframes mouse-scroll {
+            0% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+            100% {
+              opacity: 0;
+              transform: translateY(10px);
+            }   
+        }
+
+
+
+
+@-webkit-keyframes bounce { 
+            0% {-webkit-transform: translateY(0);}
+            50% {-webkit-transform: translateY(-15px);}
+            100% {-webkit-transform: translateY(0);}
+         } 
+         
+         @keyframes bounce { 
+            0% {-webkit-transform: translateY(0);}
+            50% {-webkit-transform: translateY(-15px);}
+            100% {-webkit-transform: translateY(0);}
+         }
+         
+         .bounce { 
+            -webkit-animation-name: bounce; 
+            animation-name: bounce; 
+         }
+
+     
+     
+ @-webkit-keyframes fadeInUp {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateY(40px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateY(0);
+            }
+         }
+         
+         @keyframes fadeInUp {
+            0% {
+               opacity: 0;
+               transform: translateY(40px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateY(0);
+            }
+         }
+         
+         .fadeInUp {
+         -webkit-animation-name: fadeInUp;
+         animation-name: fadeInUp;
+         }  
+
+
+ @-webkit-keyframes fadeInDown {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateY(-20px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateY(0);
+            }
+         }
+         
+         @keyframes fadeInDown {
+            0% {
+               opacity: 0;
+               transform: translateY(-20px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateY(0);
+            }
+         }
+         
+         .fadeInDown {
+         -webkit-animation-name: fadeInDown;
+         animation-name: fadeInDown;
+         }   
+
+
+/* animatia planetelor */ 
+@-webkit-keyframes revealRight {
+          0% {
+            transform: translateX(700px);
+
+          }
+          100% {
+            transform: translateX(0);
+            
+          }
+}
+          @keyframes revealRight {
+            0% {
+              transform: translateX(700px);  
+            }
+            100% {
+              transform: translateX(0);
+            }
+          }
+
+          .revealRight {
+            animation-name: revealRight;
+          }
+
+
+/* animatia soarelui */
+@-webkit-keyframes revealRightSun {
+          0% {
+            transform: translateX(100px);
+          }
+          100% {
+            transform: translateX(0);
+          }
+}
+          @keyframes revealRightSun {
+            0% {
+              transform: translateX(100px);
+            }
+            100% {
+              transform: translateX(0);
+            }
+          }
+          
+          .revealRightSun {
+            animation-name: revealRightSun;
+          }
+
+
+
+/* animatia de la inceput de la modal box */
+@-webkit-keyframes revealbottom {
+          0% {
+            opacity: 0;
+            transform:  translate(0, 1000px);
+          }
+          60% {
+            opacity: 1;
+            transform: translate(0, 0px,);
+          }  
+}
+
+          @keyframes revealbottom {
+            0% {
+              opacity: 0;
+              transform:  translate(0, 1000px);
+            }
+            60% {
+              opacity: 1;
+              transform: translate(0, 0px,);
+            }  
+          }
+
+          .revealbottom {
+            animation-name: revealbottom;
+          }
+
+
+
+
+
+
+
+
+
+         
